@@ -1,0 +1,312 @@
+/* Configurações Gerais e Paleta Roxa */
+:root {
+    --purple-dark: #2c1a4d;    /* Roxo bem escuro para textos e fundos fortes */
+    --purple-main: #5e35b1;    /* Roxo principal da identidade do site */
+    --purple-light: #ece6f8;   /* Roxo bem claro para fundos e contrastes */
+    --purple-accent: #b39ddb;  /* Roxo intermediário/destaques */
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    color: var(--purple-dark);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--purple-main);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+}
+
+.logo i {
+    color: var(--purple-main);
+}
+
+.logo span {
+    color: var(--purple-main);
+}
+
+.menu-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu-desktop ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu-desktop ul li a:hover {
+    color: var(--purple-main);
+}
+
+header button {
+    padding: 10px 25px;
+    background-color: var(--purple-main);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+/* Banner Principal */
+.banner {
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple-main));
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.txt-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.txt-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Importância (Cards) */
+.importancia {
+    padding: 80px 0;
+}
+
+.importancia .flex {
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #e2e2e2;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1 1 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--purple-accent);
+    box-shadow: 0 10px 20px rgba(94, 53, 177, 0.1);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--purple-main);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--purple-dark);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Práticas Sustentáveis (Abas Dinâmicas) */
+.praticas {
+    background-color: var(--purple-light);
+    padding: 80px 0;
+}
+
+.abas-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.botoes-abas {
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.btn-aba {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-aba:hover {
+    background-color: #e4e4e4;
+}
+
+.btn-aba.ativo {
+    background-color: var(--purple-main);
+    color: var(--white);
+}
+
+.conteudo-abas {
+    padding: 40px;
+}
+
+.aba-item {
+    display: none;
+}
+
+.aba-item.ativo {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.aba-item h3 {
+    color: var(--purple-dark);
+    margin-bottom: 15px;
+}
+
+/* Fontes */
+.fontes {
+    padding: 80px 0;
+}
+
+.sub-titulo {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.lista-fontes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.fonte-item {
+    background-color: #fafafa;
+    padding: 30px;
+    border-left: 5px solid var(--purple-main);
+    border-radius: 4px;
+}
+
+.fonte-item h4 {
+    color: var(--purple-dark);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.fonte-item p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.fonte-item a {
+    color: var(--purple-main);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.fonte-item a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--purple-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* Animação simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade Básica */
+@media screen and (max-width: 768px) {
+    .menu-desktop, .btn-contato {
+        display: none;
+    }
+    .txt-banner h1 {
+        font-size: 2.2rem;
+    }
+    .lista-fontes {
+        grid-template-columns: 1fr;
+    }
+    .botoes-abas {
+        flex-direction: column;
+    }
+}
